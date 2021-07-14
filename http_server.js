@@ -28,6 +28,14 @@ app.get('/data', function (req, res) {
     res.send(db.get('users').value());
 });
 
+app.get('/accounts', (req, res) => {
+    res.send("hello.  this is your get at endpoint /accounts");
+});
+
+app.post('/accounts', (req, res) => {
+    res.send("hi there.  this is your post at endpoint /accounts")
+});
+
 // add user
 app.post('/add', function (req, res) {
     var user = {
